@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF1B209B-2A62-431C-85C2-7D8F3ADD6DD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Emergancy_Room_Database</RootNamespace>
+    <AssemblyName>Emergancy Room Database</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chooseDeleteTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chooseDeleteTable.Designer.cs">
+      <DependentUpon>chooseDeleteTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chooseInsertTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chooseInsertTable.Designer.cs">
+      <DependentUpon>chooseInsertTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chooseSearchDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chooseSearchDatabase.Designer.cs">
+      <DependentUpon>chooseSearchDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chooseUpdateTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chooseUpdateTable.Designer.cs">
+      <DependentUpon>chooseUpdateTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteSelectBillID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteSelectBillID.Designer.cs">
+      <DependentUpon>deleteSelectBillID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteSelectCallsID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteSelectCallsID.Designer.cs">
+      <DependentUpon>deleteSelectCallsID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteSelectDoctorID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteSelectDoctorID.Designer.cs">
+      <DependentUpon>deleteSelectDoctorID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteSelectPatientID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteSelectPatientID.Designer.cs">
+      <DependentUpon>deleteSelectPatientID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteSelectStaffID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteSelectStaffID.Designer.cs">
+      <DependentUpon>deleteSelectStaffID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displayCallsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displayCallsTable.Designer.cs">
+      <DependentUpon>displayCallsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displayDoctorsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displayDoctorsTable.Designer.cs">
+      <DependentUpon>displayDoctorsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displayPatientTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displayPatientTable.Designer.cs">
+      <DependentUpon>displayPatientTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displayRoomsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displayRoomsTable.Designer.cs">
+      <DependentUpon>displayRoomsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="displayStaffTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displayStaffTable.Designer.cs">
+      <DependentUpon>displayStaffTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="choiceDisplayTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="choiceDisplayTable.Designer.cs">
+      <DependentUpon>choiceDisplayTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ERDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ERDatabaseDataSet1.cs">
+      <DependentUpon>ERDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ERDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="displayBillsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="displayBillsTable.Designer.cs">
+      <DependentUpon>displayBillsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertBillForm.Designer.cs">
+      <DependentUpon>insertBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertCallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertCallForm.Designer.cs">
+      <DependentUpon>insertCallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertDoctorForm.Designer.cs">
+      <DependentUpon>insertDoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertPatientForm.Designer.cs">
+      <DependentUpon>insertPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insertStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insertStaffForm.Designer.cs">
+      <DependentUpon>insertStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchPatientByIDDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchPatientByIDDisplay.Designer.cs">
+      <DependentUpon>searchPatientByIDDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectBillByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectBillByID.Designer.cs">
+      <DependentUpon>searchSelectBillByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectBillID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectBillID.Designer.cs">
+      <DependentUpon>searchSelectBillID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectCallByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectCallByID.Designer.cs">
+      <DependentUpon>searchSelectCallByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectCallID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectCallID.Designer.cs">
+      <DependentUpon>searchSelectCallID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectDoctorID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectDoctorID.Designer.cs">
+      <DependentUpon>searchSelectDoctorID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchDoctorByIDDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchDoctorByIDDisplay.Designer.cs">
+      <DependentUpon>searchDoctorByIDDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectPatientsID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectPatientsID.Designer.cs">
+      <DependentUpon>searchSelectPatientsID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectRoomByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectRoomByID.Designer.cs">
+      <DependentUpon>searchSelectRoomByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectRoomID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectRoomID.Designer.cs">
+      <DependentUpon>searchSelectRoomID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectStaffByIDDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectStaffByIDDisplay.Designer.cs">
+      <DependentUpon>searchSelectStaffByIDDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchSelectStaffID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchSelectStaffID.Designer.cs">
+      <DependentUpon>searchSelectStaffID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateBillForm.Designer.cs">
+      <DependentUpon>updateBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateCallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateCallForm.Designer.cs">
+      <DependentUpon>updateCallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateRoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateRoomForm.Designer.cs">
+      <DependentUpon>updateRoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateDoctorForm.Designer.cs">
+      <DependentUpon>updateDoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updatePatientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatePatientsForm.Designer.cs">
+      <DependentUpon>updatePatientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateSelectBillID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateSelectBillID.Designer.cs">
+      <DependentUpon>updateSelectBillID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateSelectCallID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateSelectCallID.Designer.cs">
+      <DependentUpon>updateSelectCallID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateSelectRoomID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateSelectRoomID.Designer.cs">
+      <DependentUpon>updateSelectRoomID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateSelectDoctorIDcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateSelectDoctorIDcs.Designer.cs">
+      <DependentUpon>updateSelectDoctorIDcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateSelectPatientID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateSelectPatientID.Designer.cs">
+      <DependentUpon>updateSelectPatientID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateSelectStaffID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateSelectStaffID.Designer.cs">
+      <DependentUpon>updateSelectStaffID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateStaffFormcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateStaffFormcs.Designer.cs">
+      <DependentUpon>updateStaffFormcs.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="chooseDeleteTable.resx">
+      <DependentUpon>chooseDeleteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chooseInsertTable.resx">
+      <DependentUpon>chooseInsertTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chooseSearchDatabase.resx">
+      <DependentUpon>chooseSearchDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chooseUpdateTable.resx">
+      <DependentUpon>chooseUpdateTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteSelectBillID.resx">
+      <DependentUpon>deleteSelectBillID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteSelectCallsID.resx">
+      <DependentUpon>deleteSelectCallsID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteSelectDoctorID.resx">
+      <DependentUpon>deleteSelectDoctorID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteSelectPatientID.resx">
+      <DependentUpon>deleteSelectPatientID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteSelectStaffID.resx">
+      <DependentUpon>deleteSelectStaffID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayBillsTable.resx">
+      <DependentUpon>displayBillsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayCallsTable.resx">
+      <DependentUpon>displayCallsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayDoctorsTable.resx">
+      <DependentUpon>displayDoctorsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayPatientTable.resx">
+      <DependentUpon>displayPatientTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayRoomsTable.resx">
+      <DependentUpon>displayRoomsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displayStaffTable.resx">
+      <DependentUpon>displayStaffTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="choiceDisplayTable.resx">
+      <DependentUpon>choiceDisplayTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertBillForm.resx">
+      <DependentUpon>insertBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertCallForm.resx">
+      <DependentUpon>insertCallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertDoctorForm.resx">
+      <DependentUpon>insertDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertPatientForm.resx">
+      <DependentUpon>insertPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insertStaffForm.resx">
+      <DependentUpon>insertStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="searchPatientByIDDisplay.resx">
+      <DependentUpon>searchPatientByIDDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectBillByID.resx">
+      <DependentUpon>searchSelectBillByID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectBillID.resx">
+      <DependentUpon>searchSelectBillID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectCallByID.resx">
+      <DependentUpon>searchSelectCallByID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectCallID.resx">
+      <DependentUpon>searchSelectCallID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectDoctorID.resx">
+      <DependentUpon>searchSelectDoctorID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchDoctorByIDDisplay.resx">
+      <DependentUpon>searchDoctorByIDDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectPatientsID.resx">
+      <DependentUpon>searchSelectPatientsID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectRoomByID.resx">
+      <DependentUpon>searchSelectRoomByID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectRoomID.resx">
+      <DependentUpon>searchSelectRoomID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectStaffByIDDisplay.resx">
+      <DependentUpon>searchSelectStaffByIDDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchSelectStaffID.resx">
+      <DependentUpon>searchSelectStaffID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateBillForm.resx">
+      <DependentUpon>updateBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateCallForm.resx">
+      <DependentUpon>updateCallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateRoomForm.resx">
+      <DependentUpon>updateRoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateDoctorForm.resx">
+      <DependentUpon>updateDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatePatientsForm.resx">
+      <DependentUpon>updatePatientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateSelectBillID.resx">
+      <DependentUpon>updateSelectBillID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateSelectCallID.resx">
+      <DependentUpon>updateSelectCallID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateSelectRoomID.resx">
+      <DependentUpon>updateSelectRoomID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateSelectDoctorIDcs.resx">
+      <DependentUpon>updateSelectDoctorIDcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateSelectPatientID.resx">
+      <DependentUpon>updateSelectPatientID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateSelectStaffID.resx">
+      <DependentUpon>updateSelectStaffID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateStaffFormcs.resx">
+      <DependentUpon>updateStaffFormcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ERDatabaseDataSet.xsc">
+      <DependentUpon>ERDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ERDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ERDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ERDatabaseDataSet.xss">
+      <DependentUpon>ERDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ERDatabaseDataSet1.xsc">
+      <DependentUpon>ERDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ERDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ERDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ERDatabaseDataSet1.xss">
+      <DependentUpon>ERDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ERDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ERDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ERDatabase.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

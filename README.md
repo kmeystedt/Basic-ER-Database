@@ -1,2 +1,2 @@
 # Basic-ER-Database
-This is a simple database written in C# using visual studio. 
+This is a simple database written in C# using visual studio 2017. 
